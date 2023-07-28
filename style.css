@@ -1,0 +1,17 @@
+.card {
+    width: 450px;
+    background-color: white;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.form {
+    width: 500px;
+    height: auto;
+    display: none;
+}
+
+.seen {
+    display: block;
+}
