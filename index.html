@@ -3,36 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Library</title>
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
 </head>
 <body>
-    <header></header>
+    <header>
+        <h1>Library</h1>
+    </header>
     <main>
-        <button class="add-btn">+</button>
-        <form action="" class="form">
-            <div class="form-control">
-                <label for="titleInput">Book Title</label>
-                <input id="titleInput" type="text">
-            </div>
-            <div class="form-control">
-                <label for="authorInput">Book Author</label>
-                <input id="authorInput" type="text">
-            </div>
-            <div class="form-control">
-                <label for="pagesInput">No of pages</label>
-                <input id="pagesInput" type="text">
-            </div>
-            <div class="form-control">
-                <label for="">Yes</label>
-                <input type="radio" name="isRead" id="" value="true">
-                <label for="">No</label>
-                <input type="radio" name="isRead" id="" value="false">
-            </div>
-            <button class="create-btn" type="button">Add Book</button>
-        </form>
+        <div class="button-form-container">
+            <button class="add-btn">+ Add New Book</button>
+            <form action="" class="form">
+                <div class="form-control">
+                    <label for="titleInput">Book Title</label>
+                    <input id="titleInput" type="text" required>
+                </div>
+                <div class="form-control">
+                    <label for="authorInput">Book Author</label>
+                    <input id="authorInput" type="text" required>
+                </div>
+                <div class="form-control">
+                    <label for="pagesInput">No of pages</label>
+                    <input id="pagesInput" type="number">
+                </div>
+                <div class="form-control">
+                    <label for="read">Have you read it?</label>
+                    <input type="checkbox" name="isRead" id="read">
+                </div>
+                <button class="create-btn">Add Book</button>
+            </form>
+        </div>
+        <div id="cards"></div>
     </main>
-    <footer></footer>
 </body>
 </html>
