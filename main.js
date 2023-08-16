@@ -19,21 +19,38 @@ let myLibrary = [
     // }
 ];
 
-function Book(title, author, noOfPages, isRead) {
-    this.title = title;
-    this.author = author;
-    this.noOfPages = noOfPages;
-    this.isRead = isRead;
+class Book {
+    constructor(title, author, noOfPages, isRead) {
+        this.title = title;
+        this.author = author;
+        this.noOfPages = noOfPages;
+        this.isRead = isRead;
+    }
+
+    showInfo() {
+        return `${this.title} by ${this.author}, ${this.noOfPages} pages, ${this.isRead ? 'Completed Reading' : 'Not read yet'}`;
+    }
+
+    toggleRead() {
+        return this.isRead = !this.isRead;
+    }
 }
 
-Book.prototype.showInfo = function() {
-    return `${this.title} by ${this.author}, ${this.noOfPages} pages, ${this.isRead ? 'Completed Reading' : 'Not read yet'}`;
-}
+// function Book(title, author, noOfPages, isRead) {
+//     this.title = title;
+//     this.author = author;
+//     this.noOfPages = noOfPages;
+//     this.isRead = isRead;
+// }
 
-Book.prototype.toggleRead = function() {
-    return this.isRead = !this.isRead;
+// Book.prototype.showInfo = function() {
+//     return `${this.title} by ${this.author}, ${this.noOfPages} pages, ${this.isRead ? 'Completed Reading' : 'Not read yet'}`;
+// }
+
+// Book.prototype.toggleRead = function() {
+//     return this.isRead = !this.isRead;
     
-}
+// }
 
 function addBookToLibrary(e) {
     let titleInput = document.getElementById('titleInput').value;
