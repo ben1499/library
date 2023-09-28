@@ -14,7 +14,7 @@
     <main>
         <div class="button-form-container">
             <button class="add-btn">+ Add New Book</button>
-            <form action="" class="form">
+            <form action="" class="form" id="form">
                 <div class="form-control">
                     <label for="titleInput">Book Title</label>
                     <input id="titleInput" type="text" required>
@@ -25,13 +25,13 @@
                 </div>
                 <div class="form-control">
                     <label for="pagesInput">No of pages</label>
-                    <input id="pagesInput" type="number">
+                    <input id="pagesInput" type="number" required>
                 </div>
                 <div class="form-control">
                     <label for="read">Have you read it?</label>
                     <input type="checkbox" name="isRead" id="read">
                 </div>
-                <button class="create-btn">Add Book</button>
+                <button type="submit" class="create-btn">Add Book</button>
             </form>
         </div>
         <div id="cards"></div>
